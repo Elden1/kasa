@@ -1,13 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { Outlet } from "react-router-dom";
+// importer éléments router
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+// page erreur
+import ErrorPage from "./error-page";
+
+import App from './pages/Home';
+import Survey from './pages/survey'
+import Header from './components/Header'
+
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+function Layout() {
+  return (
+      <>
+        <Header />
+        <Outlet />
+      </>
+  );
+}
+
+const router = createBrowserRouter([
+      {
+        element: <Layout/>,
+        errorElement: <ErrorPage />,
+        children:[
+
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/survey",
+        element: <Survey />,
+      }
+    ]
+}
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
