@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #FFF;
+  font-family: "Montserrat";
+}
+
+#cards-container {
+  margin-top: 50px;
+  border-radius: 25px;
+  padding: 50px;
+  background-color: #F6F6F6;
+}/*# sourceMappingURL=index.css.map */

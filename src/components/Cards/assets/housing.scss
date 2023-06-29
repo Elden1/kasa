@@ -1,0 +1,28 @@
+.card-housing {
+    position: relative;
+    margin: 40px;
+    width: 340px;
+}
+
+.card-housing>a>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-housing>a>p {
+
+    width: 30%;
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}

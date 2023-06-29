@@ -9,9 +9,11 @@ import {
 // page erreur
 import ErrorPage from "./error-page";
 
-import App from './pages/Home';
-import Survey from './pages/survey'
+import App from "./pages/Home";
+import Aprop from "./pages/Apropos"
 import Header from './components/Header'
+import Footer from './components/Footer'
+import './index.scss'
 
 import reportWebVitals from './reportWebVitals';
 
@@ -20,6 +22,7 @@ function Layout() {
       <>
         <Header />
         <Outlet />
+        <Footer />
       </>
   );
 }
@@ -35,8 +38,8 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/survey",
-        element: <Survey />,
+        path: "/Apropos",
+        element: <Aprop />
       }
     ]
 }
