@@ -11,6 +11,7 @@ import ErrorPage from "./error-page";
 
 import App from "./pages/Home";
 import Aprop from "./pages/Apropos"
+import FormHousing from './pages/form-housing';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './index.scss'
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/Apropos",
         element: <Aprop />
+      },
+      {
+        path: "/form-housing/:index",
+        element: <FormHousing />
       }
     ]
 }

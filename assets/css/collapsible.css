@@ -1,0 +1,32 @@
+#intel > .intel-cat {
+  margin: 15px;
+}
+
+.collaps-btn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: white;
+  background-color: #FF6060;
+}
+
+.toggled {
+  width: 80%;
+  height: auto;
+  margin: 0px auto 0px auto;
+  padding: 15px auto auto auto;
+  color: #FF6060;
+  background-color: #F6F6F6;
+}
+
+.toggled > p {
+  margin: 0px;
+}/*# sourceMappingURL=collapsible.css.map */

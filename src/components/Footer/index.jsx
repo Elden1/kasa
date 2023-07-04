@@ -1,11 +1,14 @@
 import LOGOblack from './assets/LOGOblack.png'
+import './assets/Footer.scss'
 
 function Footer() {
     return (
-        <section>
+        <footer className='main-footer'>
+            <div className='logo'>  
                 <img src={LOGOblack} alt="logo sombre" />
-                <div>© 2020 Kasa. All rights reserved</div>
-        </section>
+            </div>
+            <h2>© 2020 Kasa. All rights reserved</h2>
+        </footer>
 
     )
 }

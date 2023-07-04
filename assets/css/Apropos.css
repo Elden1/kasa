@@ -1,0 +1,19 @@
+.banner-homePage {
+  position: relative;
+}
+
+.banner-AproposPage > .img-background {
+  width: 100%;
+  height: 340px;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.banner-AproposPage > .img-background > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  opacity: 0.8;
+}/*# sourceMappingURL=Apropos.css.map */

@@ -1,0 +1,17 @@
+.main-footer {
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 25px;
+
+
+    color: white;
+    background-color: #000;
+}
+
+.main-footer>.logo {
+    height: 40px;
+}

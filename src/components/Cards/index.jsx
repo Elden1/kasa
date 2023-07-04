@@ -1,19 +1,17 @@
-import { housing } from "./housing.js"
 import './assets/housing.scss'
 
-
-function Card() {
-const listHousing = housing.map(housing =>
-    <li key={housing.id} id={housing.id} className="card-housing">
-        <a href="">
+const Card = (props) => {
+    return (
+        
+        <li key={props.index} id={props.id} className="card-housing">
+        <a href={props.href}>
         <img
-        src={housing.cover} alt='cover' />
+        src={props.cover} alt='cover' />
         <p>
-            <b>{housing.title}</b>
+            <b>{props.title}</b>
         </p>
         </a>
-    </li>)
-    return <ul>{listHousing}</ul>
+    </li>
+    )
 }
-
 export default Card

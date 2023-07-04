@@ -1,4 +1,4 @@
-import { intelContent } from "./intel.js"
+import { intelContent } from "../../intel.js"
 
 function Intel() {
     const intelContentLi = intelContent.map(intelContent =>
