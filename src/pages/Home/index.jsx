@@ -20,7 +20,7 @@ function App() {
                     <Card 
                     key={index}
                     index= {index}
-                    href= {'/form-housing/' + index}
+                    href= {'/form-housing/' + housing.id}
                     id={housing.id} 
                     cover={housing.cover} 
                     title={housing.title}/>

@@ -17,7 +17,10 @@ function Aprop() {
             <article id="intel">
             {intelContent.map((intelContent) => 
             (
-                    <Collapsible key={intelContent.title} label={intelContent.title} content={intelContent.content}/>
+                    <Collapsible
+                    key={intelContent.title} 
+                    label={intelContent.title} 
+                    content={intelContent.content}/>
             ))}
             </article>
         </section>

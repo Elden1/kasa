@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         element: <Aprop />
       },
       {
-        path: "/form-housing/:index",
+        path: "/form-housing/:housingId",
         element: <FormHousing />
       }
     ]
