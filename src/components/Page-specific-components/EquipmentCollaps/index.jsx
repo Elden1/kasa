@@ -4,7 +4,7 @@ import  '../../collapsible/assets/animations.scss'
 import  '../../collapsible/assets/collapsible.scss'
 import './assets/EquipmentCollaps.scss'
 
-const ListEquip = (props)=> {
+const ListEquip = (props) => {
     return <li className='equipContent'>{props.value}</li>
 }
 
@@ -28,6 +28,7 @@ const EquipCollaps = (props) => {
     }  
 
     const equipContent = props.content
+
     const equipItems = equipContent?.map((equipContent) => 
     <ListEquip key={equipContent.toString()}
                value= {equipContent}

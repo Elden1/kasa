@@ -4,40 +4,33 @@ import './assets/Rating.scss'
 
 const Rating = (props) => {
 
-    const Stars = (i) => {
-        return <FontAwesomeIcon 
-        icon={faStar} 
-        key={i} 
-        className='Stars'/>
-    }
-    const GreyStars = (i) => {
-        return <FontAwesomeIcon 
-        icon={faStar} 
-        key={i} 
-        className='greyStars'/>
-    }
-
     const starsRating = 
-        Array.from({length: props.rating}, (_) => {
-        return <Stars />;
+        Array.from({length: props.rating}, (i) => {
+            return <FontAwesomeIcon 
+            icon={faStar}
+            key={Math.random()}
+            className='Stars'/>
     })
 
     const greyStarsNmb = 5 - starsRating.length 
 
     const greyStarsRating = 
-        Array.from({length: greyStarsNmb}, (_) => {
-        return <GreyStars />;
-        })
-
+    Array.from({length: greyStarsNmb}, (i) => {
+        return <FontAwesomeIcon 
+        icon={faStar} 
+        key={Math.random()}
+        className='greyStars'/>
+    })
+           
         return (
-        <div className='ratingCategory'>
+        <article key={props.rating} className='ratingCategory'>
             <div className='redStars'>
                 {starsRating}
             </div>
             <div className='greyStars'>
                 {greyStarsRating} 
             </div>
-        </div>
+        </article>
             )
 }
 
