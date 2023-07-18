@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { intelContent } from "../../intel.js";
 import banner from "./assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
 import Collapsible from "../../components/collapsible"
 import './assets/Apropos.scss'
+import '../Home/assets/Home.scss'
 
 function Aprop() {
     return (
-    <section>
+    <section className="main-container">
             <div className="banner-AproposPage"> 
                 <div className="img-background">
                     <img 

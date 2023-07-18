@@ -1,0 +1,31 @@
+#Tags {
+  display: flex;
+  color: white;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 0px;
+}
+
+.tagContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 180px;
+  height: 34px;
+  background: #FF6060;
+  color: white;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 780px) {
+  .tagContent {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Tags.css.map */

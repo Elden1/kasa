@@ -6,7 +6,7 @@ import "./assets/Home.scss"
 
 
 function App() {
-  return <section>
+  return <section className="main-container">
     <div className="banner-homePage">  <h1>Chez vous, partout et ailleurs</h1>
       <div className="img-background">
           <img 
@@ -18,10 +18,9 @@ function App() {
             {housing.map((housing, index) => 
             (
                     <Card 
-                    key={index}
+                    key={housing.id}
                     index= {index}
                     href= {'/form-housing/' + housing.id}
-                    id={housing.id} 
                     cover={housing.cover} 
                     title={housing.title}/>
             ))}

@@ -1,9 +1,21 @@
+import './assets/Tags.scss'
+
+const ListTags = (props)=> {
+    return <li className='tagContent'>{props.value}</li>
+}
+
 const Tags = (props) => {
+    const tagsContent = props.tags
+    const tagsItems = tagsContent.map((tagsContent) => 
+    <ListTags key={tagsContent.toString()}
+               value= {tagsContent}
+               />
+    )
     return (
-        <div key={props.key}>
-            <p>{props.tags}</p>
-        </div>
-        )
-    }
-    
-    export default Tags
+        <ul className='tagList'>
+            {tagsItems}
+        </ul>
+    )
+}
+
+export default Tags

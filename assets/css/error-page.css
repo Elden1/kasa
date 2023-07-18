@@ -1,0 +1,12 @@
+#error-page {
+  color: #FF6060;
+}
+
+#error-page > p {
+  font-size: 180px;
+}
+
+#error-page > a {
+  text-decoration: none;
+  color: #FF6060;
+}/*# sourceMappingURL=error-page.css.map */

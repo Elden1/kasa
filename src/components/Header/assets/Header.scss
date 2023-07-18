@@ -4,7 +4,9 @@
     justify-content: space-between;
     flex-direction: row;
 
-    margin: 25px 0px;
+    width: 95%;
+
+    margin: 25px auto;
 }
 
 .main-header>nav {
@@ -20,6 +22,21 @@
     color: #FF6060;
 }
 
+.main-header>nav>a>h3 {
+    border-bottom: 1px solid white;
+}
+
 .main-header>nav>a>h3:hover {
     border-bottom: 1px solid #FF6060;
+}
+
+@media screen and (max-width: 780px) {
+    .main-header>img {
+        width: 135px;
+    }
+
+    .main-header>nav {
+        font-size: 14px;
+    }
+
 }

@@ -1,11 +1,14 @@
-.banner-homePage {
-    position: relative;
+.banner-AproposPage {
+    width: 100%;
+    margin: auto;
 }
 
 
 .banner-AproposPage>.img-background {
-    width: 100%;
+    width: 95%;
     height: 340px;
+
+    margin: auto;
     border-radius: 25px;
     background-color: black;
 }
@@ -16,4 +19,24 @@
     object-fit: cover;
     border-radius: 25px;
     opacity: 0.8;
+}
+
+#intel {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+@media screen and (max-width: 780px) {
+    #cards-container {
+        width: auto;
+    }
+
+    .banner-AproposPage>.img-background {
+        height: 200px;
+    }
+
 }

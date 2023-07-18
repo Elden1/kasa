@@ -1,18 +1,46 @@
 import React, { useState } from "react";
+import vector from './assets/VectorUp.png'
+import  './assets/animations.scss'
 import './assets/collapsible.scss'
-import arrow from './assets/arrow_back_ios-24pxpng.png'
-
 
 const Collapsible = (props) =>{
-     
-    const [open, setOPen] = useState(false);
+    const [isOpen, setOpen] = useState(false);
+    let [isClicked, setClicked] = useState(0)
 
+    const vectorOpen = {
+        animation:"openAnim 1s 1",
+        animationFillMode: "forwards"
+    }
+
+    const vectorDown = {
+        animation:"closeAnim 1s 1"
+    }
+
+    let handler = () => {
+        setClicked(isClicked+1)
+        setOpen(!isOpen)
+    }       
+    
     return(
-            <div className="intel-cat">
-                <button onClick={() => setOPen(!open)} className="collaps-btn"><h2>{props.label}</h2><img src={arrow} alt="flèche" /> </button> 
-                    {open && 
-                    <div className="toggled"><p>{props.content}</p>
-                    </div>}
+            <div className="collapsCat">
+                <button key={props.id} 
+                        onClick={() => handler()}
+                        className="collaps-btn"
+                        open={isOpen}>
+                        <h2>{props.label}</h2>
+
+                            <img
+                            className= "vector"
+                            src={vector}
+                            alt="flèche" 
+                            style= {isClicked === 0 ?  {animation: 'none'} : isOpen ? vectorOpen : vectorDown} /> 
+                            
+                </button> 
+
+                {isOpen && 
+                <div className="toggled">
+                    <p>{props.content}</p>
+                </div>}
             </div>                
         )}
 export default Collapsible

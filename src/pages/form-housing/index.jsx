@@ -1,75 +1,93 @@
 import React from "react"
 import { housing } from "../../housing.js"
 import { useParams } from "react-router-dom";
+import './assets/form-housing.scss'
 
 import Slide from "../../components/Page-specific-components/Slideshow"
 import Location from "../../components/Page-specific-components/Location"
 import Tags from "../../components/Page-specific-components/Tags"
 import Host from "../../components/Page-specific-components/Host"
+import Rating from "../../components/Page-specific-components/Rating"
 import Collapsible from "../../components/collapsible"
+import EquipCollaps from "../../components/Page-specific-components/EquipmentCollaps"
 
 function FormHousing() {
+
   let {housingId} = useParams();
-  let blabla ={housingId}
+  let currentHousingId ={housingId}
+
   return (
-   <div>
-    <h2>Now showing post {housingId}</h2>
+   <section className="main-page-container">
     {/* Component pour la gallerie */}
-    {housing.filter(housing => housing.id === blabla.housingId).map(x => 
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
         (
-            <div id="Gallery">
                 <Slide
-                key={x.id}
-                title={x.title}
+                    id={x.id}
+                    src={x.pictures}
+                    alt={x.description}
                 />
-            </div>
         ))}
+<section className="info-container">
+    <article className="locationAndTags">
     {/* Composant pour la localisation */}
-    {housing.filter(housing => housing.id === blabla.housingId).map(x => 
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
         (
-            <div id="Location">
                 <Location
-                key={x.id}
-                title={x.title}
-                location={x.location}
+                    id={x.id}
+                    title={x.title}
+                    location={x.location}
                 />
-            </div>
         ))}
     {/* Composant pour les tags */}
-    {housing.filter(housing => housing.id === blabla.housingId).map(x => 
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
         (
-            <div id="Tags">
                 <Tags
-                key={x.id}
-                tags={x.tags}
-                location={x.location}
+                    id={x.id}
+                    tags={x.tags}
                 />
-            </div>
         ))}
+    </article>
+    <article className="hostAndRating">
     {/* Composant pour l'hôte/hôtesse */}
-    {housing.filter(housing => housing.id === blabla.housingId).map(x => 
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
         (
-            <div id="Host">
                 <Host
-                key={x.id}
-                host={x.host.name}
-                hostPic={x.host.picture}
+                    id={x.id}
+                    host={x.host.name}
+                    hostPic={x.host.picture}
                 />
-            </div>
         ))}
-    {/* Composant pour le collabsible descriptif */}
-    {housing.filter(housing => housing.id === blabla.housingId).map(x => 
+    {/* Composant pour rating */}
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
         (
-            <div id="Host">
-                <Collapsible
-                    key={x.id} 
-                    label={x.description} 
-                    content={x.content}
+                <Rating
+                    id={x.id}
+                    rating={x.rating}
                 />
-            </div>
         ))}
-
-   </div>
+        </article>
+    </section>
+    <section className="collaps-container">
+    {/* Composant pour le collabsible descriptif */}
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
+        (
+                <Collapsible
+                        id={x.id} 
+                        label={"Description"} 
+                        content={x.description}
+                />
+        ))}
+    {/* Composant pour le collabsible d'équipement */}
+    {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
+        (
+                <EquipCollaps
+                    id={x.id} 
+                    label={"Equipement"} 
+                    content={x.equipments}
+                />
+        ))}
+    </section>
+</section>
   );
  }
 export default FormHousing

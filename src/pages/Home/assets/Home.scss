@@ -1,11 +1,13 @@
 .banner-homePage {
     position: relative;
+    display: flex;
+    justify-content: center;
     text-align: center;
     color: white;
 }
 
 .banner-homePage>.img-background {
-    width: 100%;
+    width: 95%;
     height: 340px;
     border-radius: 25px;
     background-color: black;
@@ -23,20 +25,48 @@
 
 .banner-homePage>h1 {
     position: absolute;
+
+    margin: 0px;
     font-size: 60px;
     z-index: 2;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #cards-container {
 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    list-style-type: none;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 95%;
+
+    margin: 50px auto;
+    padding: 0px;
     border-radius: 25px;
-    padding: 50px;
+
+    list-style-type: none;
     background-color: #F6F6F6;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 780px) {
+    #cards-container {
+        width: auto;
+    }
+
+    .banner-homePage>h1 {
+        font-size: 25px;
+    }
+
+    .banner-homePage>.img-background {
+        height: 130px;
+    }
+
 }

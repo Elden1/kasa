@@ -1,0 +1,47 @@
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.collaps-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto 40px auto;
+}
+
+.hostAndRating {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+@media screen and (max-width: 780px) {
+  .info-container {
+    flex-direction: column;
+  }
+  .hostAndRating {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hostAndRating .hostContent {
+    order: 2;
+  }
+  .hostAndRating .ratingCategory {
+    order: 1;
+  }
+}/*# sourceMappingURL=form-housing.css.map */

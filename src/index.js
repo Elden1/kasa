@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 // page erreur
-import ErrorPage from "./error-page";
+import ErrorPage from "./components/ErrorPage/error-page.jsx";
 
 import App from "./pages/Home";
 import Aprop from "./pages/Apropos"
@@ -31,7 +31,6 @@ function Layout() {
 const router = createBrowserRouter([
       {
         element: <Layout/>,
-        errorElement: <ErrorPage />,
         children:[
 
       {
@@ -45,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/form-housing/:housingId",
         element: <FormHousing />
+      },
+      {        
+        path: "/*",
+        element: <ErrorPage />
       }
     ]
 }
