@@ -5,15 +5,16 @@ import banner from "./assets/IMG.png"
 import "./assets/Home.scss"
 
 
-function App() {
+const  App = () => {
   return <section className="main-container">
-    <div className="banner-homePage">  <h1>Chez vous, partout et ailleurs</h1>
-      <div className="img-background">
-          <img 
-            src={banner}
-            alt="bannière de fôret" />
-      </div>
-      </div>
+    <div className="banner-homePage">
+      <h1>Chez vous, partout et ailleurs</h1>
+          <div className="img-background">
+              <img 
+                src={banner}
+                alt="bannière de fôret" />
+          </div>
+    </div>
     <ul id="cards-container">
             {housing.map((housing, index) => 
             (
