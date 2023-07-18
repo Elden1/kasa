@@ -9,7 +9,6 @@ import Tags from "../../components/Page-specific-components/Tags"
 import Host from "../../components/Page-specific-components/Host"
 import Rating from "../../components/Page-specific-components/Rating"
 import Collapsible from "../../components/collapsible"
-import EquipCollaps from "../../components/Page-specific-components/EquipmentCollaps"
 
 function FormHousing() {
 
@@ -79,6 +78,7 @@ return (
             (
                     <Collapsible
                             key={x.description}
+                            isEquipmnt={false}
                             id={x.id} 
                             label={"Description"} 
                             content={x.description}
@@ -87,12 +87,13 @@ return (
         {/* Composant pour le collabsible d'équipement */}
         {housing.filter(housing => housing.id === currentHousingId.housingId).map(x => 
             (
-                    <EquipCollaps
-                        key={x.equipments}
-                        id={x.id} 
-                        label={"Equipement"} 
-                        content={x.equipments}
-                    />
+                        <Collapsible
+                            key={x.equipments}
+                            isEquipmnt={true}
+                            id={x.id} 
+                            label={"Equipement"} 
+                            contentEquip={x.equipments}
+                        />
             ))}
         </section>
 </section>
