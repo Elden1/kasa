@@ -3,6 +3,7 @@ import { housing } from "../../housing.js"
 import { useParams } from "react-router-dom";
 import './assets/form-housing.scss'
 
+import ErrorPage from "../../components/ErrorPage/error-page.jsx";
 import Slide from "../../components/Page-specific-components/Slideshow"
 import Location from "../../components/Page-specific-components/Location"
 import Tags from "../../components/Page-specific-components/Tags"
@@ -10,10 +11,19 @@ import Host from "../../components/Page-specific-components/Host"
 import Rating from "../../components/Page-specific-components/Rating"
 import Collapsible from "../../components/collapsible"
 
-function FormHousing() {
+const  FormHousing = () => {
 
   let {housingId} = useParams();
   let currentHousingId = {housingId}
+
+  let idChecker = (housing.filter(housing => housing.id === currentHousingId.housingId)) 
+
+  console.log(idChecker)
+
+  if (idChecker.length === 0) {
+    return <ErrorPage />
+  }
+    else {
 
 return (
 <section className="main-page-container">
@@ -98,5 +108,6 @@ return (
         </section>
 </section>
   );
- }
+ } 
+} 
 export default FormHousing

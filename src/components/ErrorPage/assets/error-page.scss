@@ -4,9 +4,39 @@
 
 #error-page>p {
     font-size: 180px;
+    font-weight: 700;
+}
+
+#error-page>h1 {
+    font-weight: 500;
+}
+
+#error-page>a>h2 {
+    margin: 5em 0px 5em 0px;
 }
 
 #error-page>a {
-    text-decoration: none;
     color: #FF6060;
+}
+
+@media screen and (max-width: 780px) {
+    #error-page {
+        width: 90%;
+        margin: auto;
+    }
+
+    #error-page>h1 {
+        font-size: 18px;
+    }
+
+    #error-page>a>h2 {
+        font-size: 18px;
+    }
+
+    #error-page>p {
+        font-size: 100px;
+        ;
+        font-weight: 700;
+    }
+
 }

@@ -1,7 +1,15 @@
 body {
     text-align: center;
-    max-width: 1440px;
     margin: 0 auto;
     background: #FFF;
     font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+}
+
+h1,
+h2,
+h3,
+p,
+b {
+    font-weight: normal;
 }

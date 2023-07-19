@@ -48,6 +48,10 @@ const router = createBrowserRouter([
       {        
         path: "/*",
         element: <ErrorPage />
+      },
+      {        
+        path: "/form-housing/*",
+        element: <ErrorPage />
       }
     ]
 }

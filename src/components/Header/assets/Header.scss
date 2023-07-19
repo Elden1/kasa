@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-direction: row;
 
-    width: 95%;
+    width: 90%;
 
     margin: 25px auto;
 }
@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     font-size: 24px;
-    gap: 15px;
+    gap: 3em;
 }
 
 .main-header>nav>a {
@@ -32,10 +32,11 @@
 
 @media screen and (max-width: 780px) {
     .main-header>img {
-        width: 135px;
+        width: 100px;
     }
 
     .main-header>nav {
+        gap: 1em;
         font-size: 14px;
     }
 

@@ -1,5 +1,5 @@
 .collapsCat {
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 15px 0px;
     width: 100%;
 }
 
@@ -20,6 +20,7 @@
     background-color: #FF6060;
     transition: 0.4s max-height;
 
+    font-size: 14px;
 }
 
 .toggled {
@@ -58,10 +59,6 @@
 
 // medias 
 @media screen and (max-width: 780px) {
-    .collaps-btn {
-        padding: 5px;
-    }
-
     .toggled {
         font-size: 18px;
     }
@@ -78,5 +75,13 @@
     .collaps-container>.collapsCat {
         width: 95%;
         margin: 10px auto;
+    }
+
+    .collaps-btn {
+        font-size: 12px;
+    }
+
+    .collaps-btn>h2 {
+        margin: 10px 0px 10px 5px;
     }
 }

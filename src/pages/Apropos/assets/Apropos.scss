@@ -5,7 +5,6 @@
 
 
 .banner-AproposPage>.img-background {
-    width: 95%;
     height: 340px;
 
     margin: auto;
@@ -28,15 +27,27 @@
     align-items: center;
     justify-items: center;
     margin: auto;
+    margin-top: 35px;
 }
 
 @media screen and (max-width: 780px) {
+    #intel {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
     #cards-container {
         width: auto;
     }
 
     .banner-AproposPage>.img-background {
-        height: 200px;
+        height: 250px;
+        border-radius: 10px;
     }
+
+    .banner-AproposPage>.img-background>img {
+        border-radius: 10px;
+    }
+
 
 }
