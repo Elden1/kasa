@@ -21,14 +21,21 @@ const Slide = (props) => {
   const currentImage = props.src[currentImageIndex];
         
   return (
+    
       <div key={props.id} className='slideshow'>
-          <img src={currentImage} alt={props.alt} />
+
+          <img src={currentImage} 
+          
+          alt={props.alt} />
+
           <h3 className='currentImg'>{currentImageIndex + 1}/{props.src.length}</h3>
-        <div className='arrows'>
-          <img src={logoLeft} alt="flèche droite" className='arrow-rigth' onClick={prevImage}/>
-          <img src={logoRight}alt="flèche gauche" className='arrow-left' onClick={nextImage}/>
+
+          <div className='arrows'>
+            <img src={logoLeft} alt="flèche droite" className='arrow-rigth' onClick={prevImage}/>
+            <img src={logoRight}alt="flèche gauche" className='arrow-left' onClick={nextImage}/>
         </div>
-      </div>
+        </div>
+        
       )
 }
 

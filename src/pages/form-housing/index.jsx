@@ -101,7 +101,7 @@ return (
                             key={x.equipments}
                             isEquipmnt={true}
                             id={x.id} 
-                            label={"Equipement"} 
+                            label={"Equipements"} 
                             contentEquip={x.equipments}
                         />
             ))}

@@ -33,6 +33,11 @@
 }
 
 @media screen and (max-width: 780px) {
+
+    .main-page-container {
+        width: 95%;
+    }
+
     .info-container {
         flex-direction: column;
     }

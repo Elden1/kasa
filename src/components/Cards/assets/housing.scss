@@ -1,19 +1,19 @@
 .card-housing {
     position: relative;
-    margin: 70px;
+    margin: 60px;
     height: fit-content;
 }
 
 .card-housing>a>img {
-    width: 530px;
-    height: 560px;
+    width: 550px;
+    height: 550px;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .card-housing>a {
     display: block;
-    height: 560px;
+    height: 550px;
 }
 
 .card-housing>a>.card-text-container {
@@ -31,7 +31,7 @@
     text-decoration: none;
 
     color: white;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .card-housing>a>.card-text-container>p>b {
@@ -48,7 +48,7 @@
     }
 
     .card-housing>a>img {
-        width: 270px;
+        width: 100%;
         height: 290px;
         border-radius: 10px;
         object-fit: cover;
@@ -56,7 +56,7 @@
 
 }
 
-@media screen and (min-width: 360px) and (max-width: 780px) {
+@media screen and (min-width: 430px) and (max-width: 780px) {
 
     #cards-container {
         gap: 1em;
@@ -76,17 +76,17 @@
 
 @media screen and (min-width: 780px) and (max-width: 1440px) {
     .card-housing {
-        margin: 25px;
+        margin: 35px;
     }
 
     .card-housing>a {
         width: 340px;
-        height: 370px;
+        height: 340px;
     }
 
     .card-housing>a>img {
         width: 340px;
-        height: 370px;
+        height: 340px;
 
     }
 }
