@@ -18,8 +18,6 @@ const  FormHousing = () => {
 
   let idChecker = (housing.filter(housing => housing.id === currentHousingId.housingId)) 
 
-  console.log(idChecker)
-
   if (idChecker.length === 0) {
     return <ErrorPage />
   }

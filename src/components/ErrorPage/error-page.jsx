@@ -3,7 +3,7 @@ import './assets/error-page.scss'
 
 export default function ErrorPage() {
   const error = useRouteError();
-  console.error(error);
+
 
   return (
     <div id="error-page">
